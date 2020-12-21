@@ -20,6 +20,8 @@ var input = document.getElementsByClassName('name-burger')[0];
 // step 2 variabile che mi gestisce il seconod input quello dei prezzi
 var costs = document.getElementsByClassName('ingredient-container')[0].getElementsByTagName('input');
 // inserisco una variabile che mi 'conti' i ceck ?
+var ceck = document.getElementsByClassName('ingredient-container')[0].getElementsByTagName('input');
+
 
 
 // preparo variabile  costo totale del nostro ordine che inizialmente sarà zero e che poi si andra a sommare a tutti i prezzi
@@ -36,7 +38,7 @@ var costs = document.getElementsByClassName('ingredient-container')[0].getElemen
 
   document.getElementById("button-ingredient").addEventListener("click", function() {
     // step 1: se non inserisco il nome e almeno due ingredieti non si andrà avanti
-    if (input.value.length === 0 || costs.checked < 2 ){
+    if (input.value.length === 0  || costs.checked < 2 ){
       alert('inserisci nome e almeno due ingredienti');
     }else {
   // l evento sconto devo inzializzarlo a questo punto perche se lo faccio al terzo step non me lo prende - è importante
