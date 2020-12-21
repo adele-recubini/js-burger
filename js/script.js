@@ -9,8 +9,6 @@
 
 // primo  stemp è un imput devo inserire il nome del suo amburgher e faccio un ciclo for per dirgli che deve per forza inserire un valore
 
-// var input = document.getElementsByClassName('name-burger')[0];
-// var testoMessaggio = 'ciao! ';
 //
 // document.getElementById('button-ingredient').addEventListener("click", function(){
 //   for (var i = 0; i < input.length; i++) {
@@ -22,35 +20,45 @@
 //   }
 // }
 
+// step 1 : variabile che mi gestisce il primo input
+var input = document.getElementsByClassName('name-burger')[0];
+var testoMessaggio = 'ciao!'
 
+// step 2 variabile che mi gestisce il seconod input quello dei prezzi
 var costs = document.getElementsByClassName('ingredient-container')[0].getElementsByTagName('input');
 
-  // preparo variabile totale del nostro ordine
+// preparo variabile  costo totale del nostro ordine che inizialmente sarà zero e che poi si andra a sommare a tutti i prezzi
   var total = 0;
   var totalHtmlElement = document.getElementById('total-div');
 
-  // evento click su pulsante
+// step 3 : creo un array di nomi che mi serviranno per lo sconto del 20 percento o devo inserire pero all interno del click
+  var nomeCupon =['adele' , 'giovanni' , 'carmine'];
+  var discount = total - (total *0.2);
+
+  // evento click su pulsante nel mio html c'è il bottone e una volta che schiaccio con una funzione succedono delle cose
+
   document.getElementById("button-ingredient").addEventListener("click", function() {
+    // step 1: se non inserisco il nome non si andra avanti
+    if (input.value) {
+      console.log('inserisci nome');
+    }else {
 
+    }
+
+    // step 2 : una volta scleti i miei ingredienti mi calcola la somma
   total = 0;
-
   for(var x = 0; x < costs.length; x++) {
     if(costs[x].checked) {
       total += parseInt(costs[x].value);
   }
 }
+   // step 3: se inserisco un nome nella lista array mi farà lo sconto altrimenti no 
+   if (nomeCupon.indexOf(nomeCupon) ===  -1) {
+     console.log('non puoi avere lo sconto');
+   }else {
+       totalHtmlElement.getElementsByTagName('span')[0].innerText = discount;
+   }
 
-// popolo elemento #total con il totale del mio ordine e con 50 che era la partenza del costo della carne
+// popolo elemento #total- div con il totale del mio ordine e con 50 che era la partenza del costo della carne, tutto avviene dopo la parentesi quadrata del click che si chiude infatti alla fine --- stare attenti ---
   totalHtmlElement.getElementsByTagName('span')[0].innerText = total + 50;
 });
-
-// creo un array di nomi che mi serviranno per lo sconto del 20 percento o devo inserire pero all interno del click
-
-var nomeCupon =['adele' , 'giovanni' , 'carmine'];
-var discount = total - (total *0.2);
-
-if (nomeCupon.indexOf(nomeCupon) ===  -1) {
-  console.log('non poi avere lo sconto ');
-}else {
-    totalHtmlElement.getElementsByTagName('span')[0].innerText = discount;
-}
