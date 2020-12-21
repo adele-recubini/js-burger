@@ -12,17 +12,10 @@
 // step 1 : variabile che mi gestisce il primo input
 var input = document.getElementsByClassName('name-burger')[0];
 
-// creo una variabile per gestire il numero dei ceck che bisogna effetturare per andare avanti
 
+// step 2 variabile che mi gestisce il seconodo input quello dei prezzi ed è quello che mi gestira anche in numero di ceck che devo avere per continuare
 
-
-
-// step 2 variabile che mi gestisce il seconod input quello dei prezzi
 var costs = document.getElementsByClassName('ingredient-container')[0].getElementsByTagName('input');
-// inserisco una variabile che mi 'conti' i ceck ?
-var ceck = document.getElementsByClassName('ingredient-container')[0].getElementsByTagName('input');
-
-
 
 // preparo variabile  costo totale del nostro ordine che inizialmente sarà zero e che poi si andra a sommare a tutti i prezzi
   var total = 50;
@@ -54,8 +47,7 @@ var ceck = document.getElementsByClassName('ingredient-container')[0].getElement
     nome = document.getElementById('sconto').value
   // ogni volta che clicco ripate da 50
     total = 50;
-  // inoltre come per il nome del burger per andare avanti devo selezionare almeno due caselle senno non faccio partire il ciclo for
-
+ // con un ciclo for sommo tutti i ceck selezionati
     for(var x = 0; x < costs.length; x++) {
       if(costs[x].checked) {
       total += parseInt(costs[x].value);
@@ -64,10 +56,8 @@ var ceck = document.getElementsByClassName('ingredient-container')[0].getElement
 
   }
 
-    // step 2 : una volta scelti i miei ingredienti mi calcola la somma
-
    // step 3: se inserisco un nome nella lista array mi farà lo sconto altrimenti no
-   console.log(nomeCupon, nome);
+   // console.log(nomeCupon, nome);
 
    if (nomeCupon.indexOf(nome) ===  -1) {
      alert('non puoi avere lo sconto');
