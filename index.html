@@ -2,6 +2,11 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
     <title></title>
   </head>
   <body>
@@ -12,8 +17,11 @@
     <hr>
 
     <!-- primo script js  devo inserire un nome -->
+    <div class="first-input">
     <input class="name-burger" type="text" name="testo"  placeholder="Name Your Burger" value="">
-    <hr>
+    </div>
+
+
     <!-- fine primo imput  -->
 
     <!-- elenco ingredienti  con i loro costi che andranno a sommarsi al valore totale -->
@@ -24,24 +32,25 @@
 
     <ul class="first-list">
 
-       <input type="checkbox" class="ingredient-checkbox" name="list[]" value='1'><span>add</span>
+
+       <input type="checkbox" class="ingredient-checkbox" name="list[]" value='1'><span>add</span><br>
 
 
-       <input type="checkbox" class="ingredient-checkbox" name="list[]" value='2'><span>add</span>
+       <input type="checkbox" class="ingredient-checkbox" name="list[]" value='2'><span>add</span><br>
 
 
-      <input type="checkbox" class="ingredient-checkbox" name="list[]" value='3'><span>add</span>
+      <input type="checkbox" class="ingredient-checkbox" name="list[]" value='3'><span>add</span><br>
    </ul>
 
    <ul class="second-list">
 
-      <input type="checkbox" class="ingredient-checkbox" name="list[]" value='4'><span>add</span>
+      <input type="checkbox" class="ingredient-checkbox" name="list[]" value='4'><span>add</span><br>
 
 
-      <input type="checkbox" class="ingredient-checkbox" name="list[]" value='5'><span>add</span>
+      <input type="checkbox" class="ingredient-checkbox" name="list[]" value='5'><span>add</span><br>
 
 
-      <input type="checkbox" class="ingredient-checkbox" name="list[]" value='6'><span>add</span>
+      <input type="checkbox" class="ingredient-checkbox" name="list[]" value='6'><span>add</span><br>
    </ul>
        </div>
        <hr>
@@ -53,11 +62,11 @@
   <hr>
     <!--  inserimento coupon array  -->
 
+   <!-- questo è il bottone click che mi calcola tutto sconto e coupon -->
+     <div class="button">
+     <button id='button-ingredient' type="button" name="button">calculate </button> </div>
 
-   <!-- questo è il bottone click che mi calcola tutto sconto e cpupon -->
-
-
-     <button id='button-ingredient' type="button" name="button">calculate </button>
+     <!--contenitore dove viene stampato l importo -->
 
      <div id="total-div">Il totale è: <span></span></div>
 

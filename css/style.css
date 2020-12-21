@@ -1,0 +1,30 @@
+*{
+  box-sizing: border-box;
+  margin :0 auto;
+}
+body{
+  font-family: sans-serif;
+  width: 1200px;
+  height: 90px;
+}
+
+.title{
+  background-color: #FDBB40;
+}
+
+.first-input{
+ height: 80px;
+ margin-top: 40px;
+}
+
+.name-burger{
+  border: none;
+  font-size: 25px;
+}
+
+.first-list, .second-list{
+  display: inline-block;
+}
+.button{
+  text-align: center;
+}
