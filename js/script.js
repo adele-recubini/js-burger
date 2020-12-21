@@ -33,8 +33,8 @@ var costs = document.getElementsByClassName('ingredient-container')[0].getElemen
 
     var sumChecked = 0
     // step 1 : se non seleziono almeno due checked non continuare
-    for (var x = 0; x < costs.checked; x++) {
-      sumChecked += x
+    for (var x = 0; x < costs.length; x++) {
+      sumChecked += costs[x].checked
 
     if (sumChecked < 2) {
       alert (' seleziona almeno due ingredienti')
