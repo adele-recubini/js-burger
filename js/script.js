@@ -3,10 +3,6 @@
 // - deve selezionare almeno due ingredienti.
 // - se inserisce un codice coupon tra quelli che già abbiamo in lista, applichiamo uno sconto del 20% sul totale.
 // - tutto ciò viene "generato", quindi calcolato (prezzo e/o sconto), al click sul pulsante.
-// - il testo dove inserire il nome dell'hamburger è un input, di quelli che abbiamo visto in classe, customizzato a nostro piacimento ;)
-// Proseguite per step, piano piano, trovate il primo muro, i primi ostacoli commentandoli all'inizio del vostro codice. Cercate tutta la documentazione che vi possa servire per quell'obiettivo.
-// Controllate anche la mia repo su boolean-code, dal live coding di oggi, ci sarà sicuramente qualcosa che potrà esservi utile :)
-
 
 
 // step 1 : variabile che mi gestisce il primo input
@@ -21,9 +17,10 @@ var costs = document.getElementsByClassName('ingredient-container')[0].getElemen
   var total = 50;
   var totalHtmlElement = document.getElementById('total-div');
 
-// step 3 : creo un array di nomi che mi serviranno per lo sconto del 20 percento o devo inserire pero all interno del click
+// step 3 : creo un array di nomi che mi serviranno per lo sconto del 20 percento
   var nomeCupon =['adele' , 'giovanni' , 'carmine'];
   // var discount = total - (total *0.2);
+
   // la inzializzo ma non do un valore daro un valore solo all interno della funzione
   var nome;
 
@@ -48,7 +45,7 @@ var costs = document.getElementsByClassName('ingredient-container')[0].getElemen
     nome = document.getElementById('sconto').value
   // ogni volta che clicco ripate da 50
     total = 50;
- // con un ciclo for sommo tutti i ceck selezionati
+ // con un ciclo for sommo tutti i ceck ma solo se sono selezionati! vedi cheched
     for(var x = 0; x < costs.length; x++) {
       if(costs[x].checked) {
       total += parseInt(costs[x].value);
@@ -66,6 +63,6 @@ var costs = document.getElementsByClassName('ingredient-container')[0].getElemen
        total= total - (total *0.2);
    }
 
-// popolo elemento #total- div con il totale del mio ordine e con 50 che era la partenza del costo della carne, tutto avviene dopo la parentesi quadrata del click che si chiude infatti alla fine --- stare attenti ---
+// popolo elemento #total- div con il totale del mio ordine e con 50 che era la partenza del costo della carne, tutto avviene dopo la parentesi tonda del click che si chiude infatti alla fine inieme alla parentesi graffa  --- stare attenti ---
   totalHtmlElement.getElementsByTagName('span')[0].innerText = total ;
 });
