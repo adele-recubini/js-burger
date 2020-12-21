@@ -31,16 +31,15 @@ var costs = document.getElementsByClassName('ingredient-container')[0].getElemen
 
   document.getElementById("button-ingredient").addEventListener("click", function() {
 
-    var sommaChecked = 0
+    var sumChecked = 0
     // step 1 : se non seleziono almeno due checked non continuare
     for (var x = 0; x < costs.checked; x++) {
-      sommaChecked += x
-    }
+      sumChecked += x
 
-    if (sommaChecked < 2) {
+    if (sumChecked < 2) {
       alert (' seleziona almeno due ingredienti')
     }
-
+    }
     // step 1: se non inserisco il nome non continure
     if (input.value.length === 0 ){
       alert('inserisci nome');
