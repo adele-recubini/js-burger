@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <div class="title">
+      <h1>create your burger</h1>
+    </div>
+    <hr>
+
+    <!-- primo script js  devo inserire un nome -->
+    <input class="name-burger" type="text" name="testo"  placeholder="Name Your Burger" value="">
+    <hr>
+    <!-- fine primo imput  -->
+
+    <!-- elenco ingredienti  con i loro costi che andranno a sommarsi al valore totale -->
+
+    <h3>Ingredients</h3>
+
+        <div class='ingredient-container'>
+      <input type="checkbox" class="ingredient-checkbox" name="list[]" value='1'><span>add</span>
+      <input type="checkbox" class="ingredient-checkbox" name="list[]" value='2'><span>add</span>
+      <input type="checkbox" class="ingredient-checkbox" name="list[]" value='3'><span>add</span>
+      <input type="checkbox" class="ingredient-checkbox" name="list[]" value='4'><span>add</span>
+      <input type="checkbox" class="ingredient-checkbox" name="list[]" value='5'><span>add</span>
+      <input type="checkbox" class="ingredient-checkbox" name="list[]" value='6'><span>add</span>
+       </div>
+       <hr>
+  <!-- fine elenco ingredienti -->
+
+  <!--  inserimento coupon array  -->
+   <label for="">Discount coupon</label>
+  <input class="altro-testo" type="text" name="testo-2" value="">
+  <hr>
+    <!--  inserimento coupon array  -->
+
+
+   <!-- questo è il bottone click che mi calcola tutto sconto e cpupon -->
+
+
+     <button id='button-ingredient' type="button" name="button">calculate </button>
+
+     <div id="total-div">Il totale è: <span></span></div>
+
+
+
+
+
+
+
+
+
+
+    <script src="js/script.js" charset="utf-8"></script>
+  </body>
+</html>
