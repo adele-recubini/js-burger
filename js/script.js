@@ -37,9 +37,18 @@ var ceck = document.getElementsByClassName('ingredient-container')[0].getElement
   // evento click su pulsante nel mio html c'è il bottone e una volta che schiaccio con una funzione succedono delle cose
 
   document.getElementById("button-ingredient").addEventListener("click", function() {
-    // step 1: se non inserisco il nome e almeno due ingredieti non si andrà avanti
-    if (input.value.length === 0  || costs.checked < 2 ){
-      alert('inserisci nome e almeno due ingredienti');
+
+    var sommaChecked = 0
+    // step 1 : se non seleziono almeno due checked non continuare
+    for (var x = 0; x < costs.checked; x++) {
+      sommaChecked += x
+    }
+    if (sommaChecked < 2) {
+      alert (' seleziona almeno due ingredienti')
+    }
+    // step 1: se non inserisco il nome non continure
+    if (input.value.length === 0 ){
+      alert('inserisci nome');
     }else {
   // l evento sconto devo inzializzarlo a questo punto perche se lo faccio al terzo step non me lo prende - è importante
     nome = document.getElementById('sconto').value
