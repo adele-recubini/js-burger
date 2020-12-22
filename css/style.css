@@ -63,12 +63,12 @@ header{
    border-color: #FDBB40;
  }
  /* fine button */
+
  /* inzio contenitore flex */
  .container-flex{
    display:flex;
    flex-direction: row;
    justify-content: space-between;
-
    height: 250px;
    margin-top: 30px;
  }
@@ -78,7 +78,14 @@ header{
 }
 .picture{
   height: 50px;
+  padding: 0 10px;
 }
+/* custom checkbox */
+
+
+
+
+/* end custom check */
 .second-list{
   width: 500px;
 }
@@ -86,7 +93,7 @@ header{
  /* fine contenitore flex */
 
 
-/* nizio footer */
+/* inizio footer */
 .footer-flex{
   height: 80px;
   background-color:#D33359;
