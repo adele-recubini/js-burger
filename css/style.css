@@ -104,9 +104,9 @@ header{
 }
 
 .ingredient .checkbox input[type=checkbox] {
-  visibility: hidden;
+  visibility:hidden;
 }
-
+/* insrimento quadratino rosso dopo l input che è invisibile */
 .ingredient .checkbox span:after {
   display: inline-block;
   content: '';
@@ -114,8 +114,8 @@ header{
   top: 50%;
   left: 0;
   transform: translateY(-60%);
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
   background-color: #d33359;
 }
 
@@ -128,7 +128,6 @@ header{
   font-family: fontAwesome;
   content: "\f00c";
   font-size: 20px;
-  font-weight: 900;
   color: black;
 }
 
