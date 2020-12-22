@@ -74,13 +74,61 @@ header{
  }
 .first-list{
   width: 500px;
-  line-height: 2.6;
+  /* line-height: 2.6; */
 }
 .picture{
   height: 50px;
-  padding: 0 10px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
 }
+
 /* custom checkbox */
+
+.ingredient {
+
+  width: 300px;
+  height: 100px;
+  display:inline-block;
+
+}
+
+
+.ingredient .checkbox span {
+  position: relative;
+  padding-left: 30px;
+  color: #f9395e;
+
+}
+
+.ingredient .checkbox input[type=checkbox] {
+  visibility: hidden;
+}
+
+.ingredient .checkbox span:after {
+  display: inline-block;
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-60%);
+  width: 16px;
+  height: 16px;
+  background-color: #d33359;
+}
+
+.ingredient input[type=checkbox]:checked + span:before {
+  position: absolute;
+  top: 50%;
+  left: -2px;
+  transform: translateY(-55%);
+  z-index: 1;
+  font-family: fontAwesome;
+  content: "\f00c";
+  font-size: 20px;
+  font-weight: 900;
+  color: black;
+}
 
 
 
