@@ -57,10 +57,12 @@ header{
 
  /* button */
  #button-ingredient{
-   width: 100px;
-   height: 40px;
+   width: 150px;
+   height: 50px;
    background-color: #FDBB40;
    border-color: #FDBB40;
+   font-size: 25px;
+   border-radius: 6px;
  }
  /* fine button */
 
@@ -130,9 +132,6 @@ header{
   color: black;
 }
 
-
-
-
 /* end custom check */
 .second-list{
   width: 500px;
@@ -153,10 +152,12 @@ header{
 }
 .price{
   color: white;
-  line-height: 3.6;
+  line-height: 2.6;
+  font-size: 30px;
 }
 #total-div{
   color: white;
-  line-height: 3.6;
+  line-height: 2.6;
+  font-size: 30px;
 }
 /* fine footer */
