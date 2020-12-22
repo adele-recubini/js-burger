@@ -36,9 +36,8 @@ var costs = document.getElementsByClassName('ingredient-container')[0].getElemen
     if (sumChecked < 2) {
       alert (' seleziona almeno due ingredienti')
     }
-
     // step 1: se non inserisco il nome non continuare
-    if (input.value.length === 0 ){
+    else if (input.value.length === 0 ){
       alert('inserisci nome');
     }else {
   // l evento sconto devo inzializzarlo a questo punto perche se lo faccio al terzo step non me lo prende - è importante

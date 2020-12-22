@@ -10,69 +10,97 @@
     <title></title>
   </head>
   <body>
+    <!-- inserisco tutto in un contenitore  -->
+    <div class="container">
+      <!-- creo l header con la scritta e l immagine  -->
+      <header>
+        <div class="title">
+          <h1>create your burger</h1>
+        </div>
 
-    <div class="title">
-      <h1>create your burger</h1>
-    </div>
-    <hr>
+        <div class="img">
+          <img  class="img-top" src="img/burger-top.png" alt="">
+        </div>
+      </header>
+      <!-- fine header -->
 
     <!-- primo script js  devo inserire un nome -->
-    <div class="first-input">
-    <input class="name-burger" type="text" name="testo"  placeholder="Name Your Burger" value="">
-    </div>
 
+    <div class="first-input">
+     <input class="name-burger" type="text" name="testo"  placeholder="Name Your Burger" value="">
+    </div>
 
     <!-- fine primo imput  -->
 
-    <!-- elenco ingredienti  con i loro costi che andranno a sommarsi al valore totale -->
+    <!-- elenco ingredienti  con i loro costi che andranno a sommarsi al valore totale  in js -->
 
     <h3>Ingredients</h3>
 
-        <div class='ingredient-container'>
-
-    <ul class="first-list">
-
-
-       <input type="checkbox" class="ingredient-checkbox" name="list[]" value='1'><span>add</span><br>
+    <!-- creo un contentiore flex -->
+    <div class="container-flex">
+     <div class='ingredient-container'>
+      <div class="first-list">
 
 
+       <img class="picture "src="img/cheese.svg" alt="">
+        <input type="checkbox" class="ingredient-checkbox" name="list[]" value='1'><span>add</span><br>
+
+       <img class="picture "src="img/cheese.svg" alt="">
        <input type="checkbox" class="ingredient-checkbox" name="list[]" value='2'><span>add</span><br>
 
-
+      <img class="picture "src="img/cheese.svg" alt="">
       <input type="checkbox" class="ingredient-checkbox" name="list[]" value='3'><span>add</span><br>
-   </ul>
 
-   <ul class="second-list">
+     </div>
 
-      <input type="checkbox" class="ingredient-checkbox" name="list[]" value='4'><span>add</span><br>
+     <div class="second-list">
 
+      <img class="picture "src="img/cheese.svg" alt="">
+      <label for="cheese">Cheese</label>
+      <input type="checkbox" id="chesese" name="list[]" value='4'><span>add</span><br>
 
+      <img class="picture "src="img/cheese.svg" alt="">
+      <label for=""></label>
       <input type="checkbox" class="ingredient-checkbox" name="list[]" value='5'><span>add</span><br>
 
-
+      <img class="picture "src="img/cheese.svg" alt="">
       <input type="checkbox" class="ingredient-checkbox" name="list[]" value='6'><span>add</span><br>
-   </ul>
-       </div>
-       <hr>
+     </div>
+
+     </div>
+    </div>
+
+
+
+       <!-- fine contenitore flex -->
+
   <!-- fine elenco ingredienti -->
 
-  <!--  inserimento coupon array  -->
-   <label for="">Discount coupon</label>
-  <input id ="sconto" type="text" name="testo-2" value="">
-  <hr>
+  <!--  inserimento coupon array in js  -->
+    <div class="coupon">
+     <label for="">Discount coupon</label>
+      <input id ="sconto" type="text" name="testo" value="">
+    </div>
     <!--  inserimento coupon array  -->
 
    <!-- questo è il bottone click che mi calcola tutto sconto e coupon -->
      <div class="button">
-     <button id='button-ingredient' type="button" name="button">calculate </button> </div>
+      <button id='button-ingredient' type="button" name="button">calculate </button>
+     </div>
+     <!-- fine contenitore button -->
+
+     <!--  start footer -->
 
      <!--contenitore dove viene stampato l importo -->
-     <div class="footer">
+      <div class="footer-flex">
 
-     <div class="price">Your price:</div>
+        <div class="price">Your price:</div>
 
-     <div id="total-div"> <span></span></div>
-     </div>
+        <div id="total-div">$<span></span></div>
+
+      </div>
+
+     <!-- end footer -->
 
 
 
@@ -84,5 +112,6 @@
 
 
     <script src="js/script.js" charset="utf-8"></script>
+    </div>
   </body>
 </html>

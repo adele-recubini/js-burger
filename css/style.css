@@ -2,15 +2,30 @@
   box-sizing: border-box;
   margin :0 auto;
 }
-body{
-  font-family: sans-serif;
+.container{
+ font-family: sans-serif;
   width: 1200px;
-  height: 90px;
+  height: 100vh;
+}
+/*  inizio header */
+header{
+  background-color: #FDBB40;
+  height: 100px;
 }
 
 .title{
-  background-color: #FDBB40;
+  display: inline-block;
+  line-height: 2.6;
 }
+
+.img{
+  height: 150px;
+  float: right;
+
+  display: inline-block;
+
+}
+/* fine header */
 
 .first-input{
  height: 80px;
@@ -28,14 +43,65 @@ body{
 .button{
   text-align: center;
 }
-.footer{
+ /* coupon */
+ #sconto{
+   background-color: #FFF5E2;
+   border: none;
+   width: 700px;
+   height: 30px;
+ }
+ .coupon{
+   margin :50px 0;
+ }
+ /* fine coupon */
+
+ /* button */
+ #button-ingredient{
+   width: 100px;
+   height: 40px;
+   background-color: #FDBB40;
+   border-color: #FDBB40;
+ }
+ /* fine button */
+ /* inzio contenitore flex */
+ .container-flex{
+   display:flex;
+   flex-direction: row;
+   justify-content: space-between;
+
+   height: 250px;
+   margin-top: 30px;
+ }
+.first-list{
+  width: 500px;
+  line-height: 2.6;
+}
+.picture{
+  height: 50px;
+}
+.second-list{
+  width: 500px;
+}
+
+ /* fine contenitore flex */
+
+
+/* nizio footer */
+.footer-flex{
   height: 80px;
   background-color:#D33359;
+  margin-top: 50px;
+  display:flex;
+  flex-direction: row;
+  justify-content:space-around;
+  border: 1px solid black;
 }
-.price, #total-div{
-  display: inline-block;
-
+.price{
+  color: white;
+  line-height: 3.6;
 }
 #total-div{
-  float: right;
+  color: white;
+  line-height: 3.6;
 }
+/* fine footer */
